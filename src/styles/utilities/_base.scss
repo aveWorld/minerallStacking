@@ -1,0 +1,17 @@
+* {
+  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-family: $main-font-family;
+  color: $black;
+  background-color: $white;
+}
+
+a {
+  text-decoration: none;
+}

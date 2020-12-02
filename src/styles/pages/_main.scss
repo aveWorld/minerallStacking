@@ -1,0 +1,222 @@
+.main-sec1 {
+  // padding-top: 80px;
+  background: url('../../assets/svg/bg1.svg');
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-sec1__title {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 68px;
+  color: $white;
+}
+
+.main-sec1__subtitle {
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  color: $white;
+}
+
+.main-sec1__subscribe {
+  margin-top: 26px;
+  position: relative;
+}
+
+.main-sec1__subscribe__input {
+  background-color: $lightBlue;
+  color: $white;
+  border: none;
+  font-weight: normal;
+  font-size: 16px;
+  width: 520px;
+  line-height: 22px;
+  padding: 18px 0px 18px 20px;
+  border-radius: 4px;
+  transition: all 0.25s ease-in-out;
+}
+
+.main-sec1__subscribe__input::placeholder {
+  color: $white;
+  opacity: 0.5;
+}
+
+.main-sec1__subscribe__input:focus {
+  background-color: $white;
+  color: $black;
+}
+
+.main__input__error {
+  color: $white;
+  padding-left: 10px;
+}
+
+.main__input__subscribed {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $white;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.main__input__subscribed__span {
+  padding-left: 5px;
+}
+
+.main-sec1__subscribe__btn {
+  background-color: $mainBlue;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  border: none;
+  padding: 13px 26px;
+  position: absolute;
+  right: 2%;
+  top: 10%;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.main-sec1__subscribe__btn:hover {
+  background-color: $white;
+  color: $mainBlue;
+}
+
+.main-sec2-block1 {
+  display: flex;
+}
+
+.main__modal {
+  transition: all 0.25s ease-in-out;
+}
+
+.main-sec2-block1__text {
+  padding-top: 120px;
+}
+
+.main-sec2-block1__img {
+  margin-top: -130px;
+}
+
+.main-sec2-block2__text {
+  margin-right: 160px;
+}
+
+.main-sec2-block3__img {
+  margin-bottom: -44px;
+}
+
+.main-sec2-block3__text {
+  margin-left: 48px;
+  margin-top: 60px;
+}
+
+.main-sec3__block-title {
+  color: $mainBlue;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.main-sec3__block-subtitle {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $black;
+  padding-top: 13px;
+}
+
+.main-sec2-block1__text {
+  padding-left: 80px;
+}
+
+.main-sec2-block2 {
+  margin-top: 126px;
+  display: flex;
+  align-items: center;
+}
+
+.main-sec2-block3 {
+  margin-top: 126px;
+  display: flex;
+}
+
+.main-sec3 {
+  background: url('../../assets/svg/bg2.svg');
+}
+
+.main-sec3__title {
+  padding-top: 84px;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  color: $white;
+  text-align: center;
+}
+
+.main-sec3__cards {
+  margin-top: 84px;
+  display: flex;
+}
+
+.main-sec3__card {
+  flex: 1 1 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 30px;
+}
+
+.main-sec3__card__text {
+  text-align: center;
+  color: $white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 32px;
+}
+
+.main-sec3__btn {
+  display: flex;
+  align-items: center;
+  background-color: $mainBlue;
+  padding: 14px 36px 14px 18px;
+  border-radius: 4px;
+  border: 2px solid $white;
+  margin: 84px auto 0px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.main-sec3__btn:hover {
+  background-color: $lightBlue;
+}
+
+.main-sec3__btn__text {
+  padding-left: 24px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+}
+
+.main-sec3__rights {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: $white;
+  text-align: center;
+  padding-top: 130px;
+  padding-bottom: 52px;
+}
