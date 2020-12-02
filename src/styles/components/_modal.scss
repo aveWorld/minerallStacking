@@ -198,3 +198,40 @@
 .modal-finish__img {
   text-align: center;
 }
+
+@media screen and (max-width: 992px) {
+  .modal__title {
+    margin-top: 300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .modal__input {
+    width: 320px;
+  }
+  .modal__submit-btn {
+    width: 320px;
+  }
+  .modal__wrapper {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .modal__title {
+    margin-top: 360px;
+  }
+  .modal__subtitle {
+    padding: 0 5px;
+  }
+  .modal__input {
+    width: 300px;
+    margin-left: 10px;
+  }
+  .modal__submit-btn {
+    width: 300px;
+    text-align: center;
+    margin: 60px auto 100px;
+    display: block;
+  }
+}

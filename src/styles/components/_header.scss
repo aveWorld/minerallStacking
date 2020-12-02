@@ -49,3 +49,24 @@
 .header__modal {
   transition: all 0.25s ease-in-out;
 }
+
+@media screen and (max-width: 992px) {
+  .header__links {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header__wrapper {
+    flex-wrap: wrap;
+    padding: 28px 20px 5px 20px;
+  }
+  .header__btn {
+    order: 3;
+    flex-basis: 100%;
+    margin-top: 5px;
+  }
+  .header__btn__content {
+    margin: 0 auto;
+  }
+}

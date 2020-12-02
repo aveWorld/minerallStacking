@@ -220,3 +220,108 @@
   padding-top: 130px;
   padding-bottom: 52px;
 }
+
+@media screen and (max-width: 768px) {
+  .main-sec1__title {
+    font-size: 42px;
+  }
+  .main-sec1__subtitle {
+    font-size: 18px;
+  }
+  .main-sec2-block2 {
+    flex-direction: column;
+    margin-top: 80px;
+  }
+  .main-sec2-block2__text {
+    margin-right: 0px;
+  }
+  .main-sec3__block-title {
+    text-align: center;
+  }
+  .main-sec2-block2__img {
+    margin-top: 40px;
+  }
+  .main-sec2-block1 {
+    flex-direction: column;
+  }
+  .main-sec2-block1__img {
+    order: 2;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .main-sec2-block1__text {
+    padding-left: 0px;
+    padding-top: 60px;
+  }
+  .main-sec2-block3 {
+    flex-direction: column;
+    margin-top: 80px;
+  }
+  .main-sec2-block3__text {
+    margin-left: 0px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  .main-sec2-block3__img {
+    order: 2;
+    text-align: center;
+  }
+  .main-sec3__cards {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .main-sec3__card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .main-sec3__card__text {
+    padding-top: 0px;
+    padding-left: 20px;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main-sec1__subscribe__input {
+    width: 360px;
+  }
+  .main-sec1__subscribe__btn {
+    top: 100%;
+    left: 50%;
+    margin-top: 10px;
+    transform: translateX(-50%);
+    background-color: $white;
+    color: $mainBlue;
+  }
+  .main-sec1__title {
+    text-align: center;
+  }
+  .main-sec1__subtitle {
+    text-align: center;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-sec2-block1__img > div > div > svg {
+    width: 85%;
+  }
+  .main-sec2-block2__img > div > div > svg {
+    width: 85%;
+  }
+  .main-sec2-block3__img {
+    margin-bottom: -52px;
+  }
+  .main-sec2-block3__img > div > div > svg {
+    width: 85%;
+  }
+  .main-sec1__subscribe__input {
+    width: 320px;
+  }
+  .main-sec1__title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}

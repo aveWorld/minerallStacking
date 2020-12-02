@@ -8,6 +8,7 @@ import Triangle from '../../../assets/svg/triangle.svg';
 
 // Components
 import Modal from '../../Modal';
+import BurgerMenu from '../BurgerMenu';
 
 export default function Header() {
   const [modalWindow, setModalWindow] = useState(false);
@@ -56,6 +57,7 @@ export default function Header() {
             </span>
           </button>
         </div>
+        <BurgerMenu />
       </div>
     </header>
   );
