@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Formik, Field } from 'formik';
 import { ReactSVG } from 'react-svg';
+import axios from 'axios';
 
 // Assets
 import exitModal from '../../assets/svg/exitModal.svg';
@@ -29,6 +30,7 @@ export default function Modal({ closeModal }) {
                 ethHold: '',
                 ethStake: '',
                 whenStake: '',
+                type: 'form',
               }}
               validate={(values) => {
                 const errors = {};
@@ -60,7 +62,11 @@ export default function Modal({ closeModal }) {
               onSubmit={(values, { setSubmitting }) => {
                 setTimeout(() => {
                   setModalFinish(true);
-                  alert(JSON.stringify(values, null, 2));
+                  axios({
+                    method: 'post',
+                    url: 'http://localhost:5000/mail',
+                    data: values,
+                  });
                   setSubmitting(false);
                 }, 400);
               }}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ReactSVG } from 'react-svg';
+import axios from 'axios';
 
 // Assets
 import bigEth from '../assets/svg/bigEth.svg';
@@ -52,7 +53,15 @@ export default function Home() {
       setSubscribe(true);
       setSubscribeEmail('');
       setInputPlaceholder('');
-      alert(subscribeEmail);
+      const data = {
+        email: subscribeEmail,
+        type: 'sub',
+      };
+      axios({
+        method: 'post',
+        url: 'http://localhost:5000/mail',
+        data,
+      });
     }
   };
 
