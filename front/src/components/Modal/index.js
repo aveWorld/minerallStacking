@@ -9,7 +9,7 @@ import Check from '../../assets/svg/Check.svg';
 
 export default function Modal({ closeModal }) {
   const [modalFinish, setModalFinish] = useState(false);
-
+  const [reponseError, setResponseError] = useState(false);
   return (
     <div className="modal">
       <div className="modal__wrapper">
@@ -59,15 +59,19 @@ export default function Modal({ closeModal }) {
                 }
                 return errors;
               }}
-              onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
-                  setModalFinish(true);
-                  axios({
+              onSubmit={async (values, { setSubmitting }) => {
+                setTimeout(async () => {
+                  const response = await axios({
                     method: 'post',
                     url: 'http://localhost:5000/mail',
                     data: values,
                   });
-                  setSubmitting(false);
+                  if (!response.data.errors) {
+                    setModalFinish(true);
+                    setSubmitting(false);
+                  } else {
+                    setResponseError(true);
+                  }
                 }, 400);
               }}
             >
@@ -222,6 +226,11 @@ export default function Modal({ closeModal }) {
                   >
                     Confirm
                   </button>
+                  {reponseError && (
+                    <div className="modal__error">
+                      An Error Occured, Please Try Again
+                    </div>
+                  )}
                 </form>
               )}
             </Formik>

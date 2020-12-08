@@ -18,6 +18,7 @@ app.use(
 app.use(cors());
 
 app.post('/mail', async (req, res) => {
+  let mailError;
   const msg = {
     to: 'mykhailo.potashnik.knm.2018@lpnu.ua',
     from: 'texnarb228@gmail.com', // Use the email address or domain you verified above
@@ -41,12 +42,12 @@ app.post('/mail', async (req, res) => {
   try {
     await sgMail.send(msg);
   } catch (error) {
-    console.error(error);
-
     if (error.response) {
+      mailError = error.response.body;
       console.error(error.response.body);
     }
   }
+  res.send(mailError);
 });
 
 app.listen(process.env.PORT, () => {

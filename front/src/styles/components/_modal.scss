@@ -119,7 +119,6 @@
 
 .modal__submit-btn {
   margin-top: 60px;
-  margin-bottom: 100px;
   font-weight: bold;
   font-size: 16px;
   line-height: 22px;
@@ -197,6 +196,13 @@
 
 .modal-finish__img {
   text-align: center;
+}
+
+.modal__error {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #ffabd3;
 }
 
 @media screen and (max-width: 992px) {

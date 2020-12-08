@@ -41,7 +41,7 @@ export default function Home() {
     setSubscribeEmail(e.target.value);
   };
 
-  const submitSubscribe = () => {
+  const submitSubscribe = async () => {
     setError('');
     if (!subscribeEmail) {
       setError('Email Required');
@@ -50,18 +50,22 @@ export default function Home() {
     ) {
       setError('Invalid email address');
     } else {
-      setSubscribe(true);
-      setSubscribeEmail('');
-      setInputPlaceholder('');
       const data = {
         email: subscribeEmail,
         type: 'sub',
       };
-      axios({
+      const response = await axios({
         method: 'post',
         url: 'http://localhost:5000/mail',
         data,
       });
+      if (!response.data.errors) {
+        setSubscribe(true);
+        setSubscribeEmail('');
+        setInputPlaceholder('');
+      } else {
+        setError('An Error Occured, Please Try Again');
+      }
     }
   };
 
