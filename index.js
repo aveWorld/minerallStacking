@@ -10,7 +10,6 @@ sgMail.setApiKey(process.env.SENDGRID_API);
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(
   bodyParser.urlencoded({
-    // to support URL-encoded bodies
     extended: true,
   })
 );
@@ -21,7 +20,7 @@ app.post('/mail', async (req, res) => {
   let mailError;
   const msg = {
     to: 'mykhailo.potashnik.knm.2018@lpnu.ua',
-    from: 'texnarb228@gmail.com', // Use the email address or domain you verified above
+    from: 'texnarb228@gmail.com',
   };
   const data = req.body;
   if (data.type === 'form') {
