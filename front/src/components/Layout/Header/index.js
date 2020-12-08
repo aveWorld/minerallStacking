@@ -39,7 +39,7 @@ export default function Header() {
         </div>
         <div className="header__links">
           <Link to="/" className="header__link">
-            STACKING
+            STAKING
           </Link>
           <Link to="/" className="header__link">
             HOW IT WORKS

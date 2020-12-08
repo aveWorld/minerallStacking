@@ -54,17 +54,21 @@ export default function Home() {
         email: subscribeEmail,
         type: 'sub',
       };
-      const response = await axios({
-        method: 'post',
-        url: 'http://localhost:5000/mail',
-        data,
-      });
-      if (!response.data.errors) {
-        setSubscribe(true);
-        setSubscribeEmail('');
-        setInputPlaceholder('');
-      } else {
-        setError('An Error Occured, Please Try Again');
+      try {
+        const response = await axios({
+          method: 'post',
+          url: 'http://localhost:5000/mail',
+          data,
+        });
+        if (!response.data.errors) {
+          setSubscribe(true);
+          setSubscribeEmail('');
+          setInputPlaceholder('');
+        } else {
+          setError('An Error Occurred, Please Try Again');
+        }
+      } catch (err) {
+        if (err) setError('An Error Occurred, Please Try Again');
       }
     }
   };
@@ -80,7 +84,7 @@ export default function Home() {
       <section className="main-sec1">
         <h1 className="main-sec1__title">Ethereum Liquid Staking</h1>
         <h3 className="main-sec1__subtitle">
-          Subscribe to get updates on the launch of Minerall Stacking
+          Subscribe to get updates on the launch of Minerall Staking
         </h3>
         <div className="main-sec1__subscribe">
           <input

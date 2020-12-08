@@ -61,16 +61,20 @@ export default function Modal({ closeModal }) {
               }}
               onSubmit={async (values, { setSubmitting }) => {
                 setTimeout(async () => {
-                  const response = await axios({
-                    method: 'post',
-                    url: 'http://localhost:5000/mail',
-                    data: values,
-                  });
-                  if (!response.data.errors) {
-                    setModalFinish(true);
-                    setSubmitting(false);
-                  } else {
-                    setResponseError(true);
+                  try {
+                    const response = await axios({
+                      method: 'post',
+                      url: 'http://localhost:5000/mail',
+                      data: values,
+                    });
+                    if (!response.data.errors) {
+                      setModalFinish(true);
+                      setSubmitting(false);
+                    } else {
+                      setResponseError(true);
+                    }
+                  } catch (err) {
+                    if (err) setResponseError(true);
                   }
                 }, 400);
               }}
@@ -228,7 +232,7 @@ export default function Modal({ closeModal }) {
                   </button>
                   {reponseError && (
                     <div className="modal__error">
-                      An Error Occured, Please Try Again
+                      An Error Occurred, Please Try Again
                     </div>
                   )}
                 </form>

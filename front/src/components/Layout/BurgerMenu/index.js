@@ -52,7 +52,7 @@ export default function BurgerMenu() {
         }
       >
         <Link to="/" className="burger__link" onClick={handleMenu}>
-          STACKING
+          STAKING
         </Link>
         <Link to="/" className="burger__link" onClick={handleMenu}>
           HOW IT WORKS
