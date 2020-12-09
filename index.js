@@ -32,7 +32,7 @@ app.use(cors());
 app.post('/mail', async (req, res) => {
   let mailError;
   const msg = {
-    to: 'motzart66@gmail.com',
+    to: 'w@minerall.io',
     from: 'staking@minerall.io', // Use the email address or domain you verified above
   };
   const data = req.body;
