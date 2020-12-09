@@ -16,7 +16,7 @@ app.use(
 );
 
 const corsOptions = {
-  origin: '104.248.33.120',
+  origin: 'https://staking.minerall.io/',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
