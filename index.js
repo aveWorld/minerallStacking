@@ -21,9 +21,8 @@ const corsOptions = {
 };
 
 app.use(helmet());
-app.use(cors(corsOptions));
 
-app.post('/mail', async (req, res) => {
+app.post('/mail', cors(corsOptions), async (req, res) => {
   let mailError;
   const msg = {
     to: 'w@minerall.io',
