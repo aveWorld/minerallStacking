@@ -57,7 +57,7 @@ export default function Home() {
       try {
         const response = await axios({
           method: 'post',
-          url: 'http://localhost:5000/mail',
+          url: '/mail',
           data,
         });
         if (!response.data.errors) {
