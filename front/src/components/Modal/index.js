@@ -64,7 +64,7 @@ export default function Modal({ closeModal }) {
                   try {
                     const response = await axios({
                       method: 'post',
-                      url: 'http://localhost:5000/mail',
+                      url: '/mail',
                       data: values,
                     });
                     if (!response.data.errors) {
