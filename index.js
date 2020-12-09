@@ -32,8 +32,8 @@ app.use(cors());
 app.post('/mail', async (req, res) => {
   let mailError;
   const msg = {
-    to: process.env.EMAIL_TO,
-    from: process.env.EMAIL_FROM, // Use the email address or domain you verified above
+    to: 'motzart66@gmail.com',
+    from: 'staking@minerall.io', // Use the email address or domain you verified above
   };
   const data = req.body;
   if (data.type === 'form') {
