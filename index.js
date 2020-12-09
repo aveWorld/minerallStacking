@@ -27,7 +27,7 @@ const corsOptions = {
 };
 
 app.use(helmet());
-app.use(cors(whitelist));
+app.use(cors(corsOptions));
 
 app.post('/mail', async (req, res) => {
   let mailError;
