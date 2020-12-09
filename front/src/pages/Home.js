@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ReactSVG } from 'react-svg';
-import axios from 'axios';
+import { sendMail } from '../helpers/sendMail';
 
 // Assets
 import bigEth from '../assets/svg/bigEth.svg';
@@ -55,11 +55,7 @@ export default function Home() {
         type: 'sub',
       };
       try {
-        const response = await axios({
-          method: 'post',
-          url: '/mail',
-          data,
-        });
+        const response = await sendMail(data);
         if (!response.data.errors) {
           setSubscribe(true);
           setSubscribeEmail('');

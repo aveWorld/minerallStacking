@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Formik, Field } from 'formik';
 import { ReactSVG } from 'react-svg';
-import axios from 'axios';
+import { sendMail } from '../../helpers/sendMail';
 
 // Assets
 import exitModal from '../../assets/svg/exitModal.svg';
@@ -62,11 +62,7 @@ export default function Modal({ closeModal }) {
               onSubmit={async (values, { setSubmitting }) => {
                 setTimeout(async () => {
                   try {
-                    const response = await axios({
-                      method: 'post',
-                      url: '/mail',
-                      data: values,
-                    });
+                    const response = await sendMail(values);
                     if (!response.data.errors) {
                       setModalFinish(true);
                       setSubmitting(false);
