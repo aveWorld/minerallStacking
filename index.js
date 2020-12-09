@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const sgMail = require('@sendgrid/mail');
 const cors = require('cors');
+const helmet = require('helmet');
 const bodyParser = require('body-parser');
 
 sgMail.setApiKey(process.env.SENDGRID_API);
@@ -15,13 +16,25 @@ app.use(
   })
 );
 
+const whitelist = ['http://staking.minerall.io', 'https://staking.minerall.io/'];
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+};
+
+app.use(helmet());
 app.use(cors());
 
 app.post('/mail', async (req, res) => {
   let mailError;
   const msg = {
-    to: 'mykhailo.potashnik.knm.2018@lpnu.ua',
-    from: 'texnarb228@gmail.com', // Use the email address or domain you verified above
+    to: process.env.EMAIL_TO,
+    from: process.env.EMAIL_FROM, // Use the email address or domain you verified above
   };
   const data = req.body;
   if (data.type === 'form') {
@@ -49,7 +62,8 @@ app.post('/mail', async (req, res) => {
   }
   res.send(mailError);
 });
+const port = process.env.PORT || 3000;
 
-app.listen(process.env.PORT, () => {
-  console.log(`Example app listening at http://localhost:${process.env.PORT}`);
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
 });
