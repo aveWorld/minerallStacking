@@ -87,7 +87,6 @@ export default function Modal({ closeModal }) {
                 handleBlur,
                 handleSubmit,
                 isSubmitting,
-                /* and other goodies */
               }) => (
                 <form onSubmit={handleSubmit} className="modal__form">
                   <label htmlFor="name" className="modal__label">
