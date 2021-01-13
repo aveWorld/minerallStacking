@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 export default function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,12 +50,12 @@ export default function BurgerMenu() {
             : 'burger-links burger-position'
         }
       >
-        <Link to="/" className="burger__link" onClick={handleMenu}>
+        <a href="#staking" className="burger__link" onClick={handleMenu}>
           STAKING
-        </Link>
-        <Link to="/" className="burger__link" onClick={handleMenu}>
+        </a>
+        <a href="#how-it-works" className="burger__link" onClick={handleMenu}>
           HOW IT WORKS
-        </Link>
+        </a>
       </div>
     </div>
   );
