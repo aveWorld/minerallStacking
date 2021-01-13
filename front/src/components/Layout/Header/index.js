@@ -38,12 +38,12 @@ export default function Header() {
           </Link>
         </div>
         <div className="header__links">
-          <Link to="/" className="header__link">
+          <a href="#staking" className="header__link">
             STAKING
-          </Link>
-          <Link to="/" className="header__link">
+          </a>
+          <a href="#how-it-works" className="header__link">
             HOW IT WORKS
-          </Link>
+          </a>
         </div>
         <div className="header__btn">
           <button

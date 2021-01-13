@@ -114,7 +114,7 @@ export default function Home() {
           {error && <div className="main__input__error">{error}</div>}
         </div>
       </section>
-      <section className="main-sec2 container">
+      <section className="main-sec2 container" id="staking">
         <div className="main-sec2-block1">
           <div className="main-sec2-block1__img">
             <ReactSVG src={bigEth} />
@@ -164,7 +164,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="main-sec3">
+      <section className="main-sec3" id="how-it-works">
         <h2 className="main-sec3__title">How it works</h2>
         <div className="main-sec3__cards container">
           <div className="main-sec3__card">
